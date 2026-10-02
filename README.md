@@ -1,5 +1,7 @@
 # Food Ordering Chatbot
 
+**[Try the live demo](https://ron-food-chatbot.streamlit.app)** (may take about 30 seconds to wake up)
+
 A chatbot that takes takeaway orders in natural language, answers factual questions, and handles small talk. It is built from classical NLP components (TF-IDF, cosine similarity, logistic regression) and a finite state machine, with no large language model involved.
 
 ```
