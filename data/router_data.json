@@ -1,0 +1,144 @@
+[
+  { "text": "hi", "label": "intent" },
+  { "text": "hello bro", "label": "intent" },
+  { "text": "hey there bot", "label": "intent" },
+  { "text": "yo pookie", "label": "intent" },
+  { "text": "good morning my friend", "label": "intent" },
+  { "text": "hiya machine", "label": "intent" },
+  { "text": "sup", "label": "intent" },
+  { "text": "hey hey hey", "label": "intent" },
+  { "text": "hello I'm back", "label": "intent" },
+  { "text": "yo what's up", "label": "intent" },
+  { "text": "hey dude how are you", "label": "intent" },
+  { "text": "hi assistant can you help", "label": "intent" },
+  { "text": "hi then I want pizza", "label": "intent" },
+
+  { "text": "bye", "label": "intent" },
+  { "text": "gtg see ya", "label": "intent" },
+  { "text": "talk soon bro", "label": "intent" },
+  { "text": "alright I'm off goodbye", "label": "intent" },
+  { "text": "peace out", "label": "intent" },
+  { "text": "bye bot", "label": "intent" },
+  { "text": "okay thanks bye", "label": "intent" },
+
+  { "text": "help me", "label": "intent" },
+  { "text": "what can you do", "label": "intent" },
+  { "text": "what are your features", "label": "intent" },
+  { "text": "how does this work", "label": "intent" },
+  { "text": "i need help ordering", "label": "intent" },
+  { "text": "what commands exist", "label": "intent" },
+  { "text": "how do I use you to order", "label": "intent" },
+
+  { "text": "my name is john", "label": "intent" },
+  { "text": "call me bossman", "label": "intent" },
+  { "text": "i go by kyro", "label": "intent" },
+  { "text": "you can call me mike", "label": "intent" },
+  { "text": "from now on call me king", "label": "intent" },
+  { "text": "remember my name lucas", "label": "intent" },
+  { "text": "I'm called andrew", "label": "intent" },
+  { "text": "my name is sam", "label": "intent" },
+
+  { "text": "what's my name again", "label": "intent" },
+  { "text": "do you remember my name", "label": "intent" },
+  { "text": "who am I", "label": "intent" },
+  { "text": "what did I tell you my name is", "label": "intent" },
+
+  { "text": "what's on the menu", "label": "intent" },
+  { "text": "show me the menu please", "label": "intent" },
+  { "text": "what food do you sell", "label": "intent" },
+  { "text": "can I see the menu", "label": "intent" },
+  { "text": "tell me the menu then I'll order", "label": "intent" },
+  { "text": "food options", "label": "intent" },
+
+  { "text": "how much is a pizza", "label": "intent" },
+  { "text": "what's the price of garlic bread", "label": "intent" },
+  { "text": "price list", "label": "intent" },
+  { "text": "price of burger", "label": "intent" },
+  { "text": "how much do drinks cost", "label": "intent" },
+
+  { "text": "do you have fries", "label": "intent" },
+  { "text": "is cola available", "label": "intent" },
+  { "text": "do you sell wings", "label": "intent" },
+
+  { "text": "what drinks do you sell", "label": "intent" },
+  { "text": "do you have coke", "label": "intent" },
+  { "text": "can i get a coke", "label": "intent" },
+
+
+  { "text": "who created you", "label": "qa" },
+  { "text": "who built this chatbot", "label": "qa" },
+  { "text": "who made you", "label": "qa" },
+
+  { "text": "what is ai", "label": "qa" },
+  { "text": "define ai", "label": "qa" },
+
+  { "text": "what is nlp", "label": "qa" },
+  { "text": "define nlp", "label": "qa" },
+
+  { "text": "how does chatgpt work", "label": "qa" },
+  { "text": "how do chatbots work", "label": "qa" },
+
+  { "text": "what is pizza", "label": "qa" },
+  { "text": "where was pizza invented", "label": "qa" },
+  { "text": "how many calories in pizza", "label": "qa" },
+
+  { "text": "what is a burger", "label": "qa" },
+  { "text": "where were burgers invented", "label": "qa" },
+
+  { "text": "what are fries", "label": "qa" },
+  { "text": "what are wings", "label": "qa" },
+  { "text": "what is garlic bread", "label": "qa" },
+
+  { "text": "how long does delivery take", "label": "qa" },
+  { "text": "do you deliver", "label": "qa" },
+  { "text": "where do you deliver", "label": "qa" },
+
+  { "text": "can i track my order", "label": "qa" },
+  { "text": "do you take card", "label": "qa" },
+
+  { "text": "what is a chatbot", "label": "qa" },
+  { "text": "why was this chatbot made", "label": "qa" },
+  { "text": "can you define artificial intelligence", "label": "qa" },
+  { "text": "explain ai in simple terms", "label": "qa" },
+  { "text": "what does ai stand for", "label": "qa" },
+
+  { "text": "what does nlp stand for", "label": "qa" },
+  { "text": "explain natural language processing", "label": "qa" },
+
+  { "text": "what is tf idf", "label": "qa" },
+  { "text": "how does tf idf work", "label": "qa" },
+
+  { "text": "describe pepperoni pizza", "label": "qa" },
+  { "text": "describe bbq chicken pizza", "label": "qa" },
+  { "text": "what is a veggie burger", "label": "qa" },
+
+  { "text": "are fries unhealthy", "label": "qa" },
+  { "text": "are burgers unhealthy", "label": "qa" },
+
+  { "text": "why do you not support card payments", "label": "qa" },
+  { "text": "why is order tracking not implemented", "label": "qa" },
+  { "text": "how did you build this chatbot", "label": "qa" },
+  { "text": "why are you using tf idf", "label": "qa" },
+
+  { "text": "how do i order food", "label": "intent" },
+  { "text": "how can i place an order", "label": "intent" },
+  { "text": "how do i start an order", "label": "intent" },
+
+  { "text": "how can i add more items", "label": "intent" },
+  { "text": "how do i change my order", "label": "intent" },
+
+  { "text": "how much does a large pizza cost", "label": "intent" },
+  { "text": "what does a medium fries cost", "label": "intent" },
+
+  { "text": "can you show me the menu again", "label": "intent" },
+  { "text": "can you repeat the menu", "label": "intent" },
+
+  { "text": "where can i see my order", "label": "intent" },
+  { "text": "what did i order again", "label": "intent" },
+
+  { "text": "can you tell me a joke", "label": "intent" },
+  { "text": "i am bored tell me something funny", "label": "intent" },
+  { "text": "do you remember my name", "label": "intent" },
+  { "text": "what did i tell you my name was", "label": "intent" }
+
+]

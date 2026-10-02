@@ -1,0 +1,399 @@
+[
+  {
+    "name": "greeting",
+    "examples": [
+      "hi", "hello", "hey", "hiya", "yo", "hi there", "good morning",
+      "good afternoon", "good evening", "hello bot", "hey there",
+      "hey pookie", "sup", "howdy", "hiya mate", "yo bro",
+      "hey machine", "hey assistant", "hi again", "hello hello",
+      "hi chatbot", "what's up", "hey dude", "hey girl", "hi mate"
+    ],
+    "responses": [
+      "Hello there!",
+      "Hi! How can I help you today?",
+      "Hey {name}! Nice to see you."
+    ]
+  },
+
+  {
+    "name": "goodbye",
+    "examples": [
+      "bye", "goodbye", "see you", "see you soon", "catch you later",
+      "talk soon", "bye bye", "i'm off", "got to go", "laters", "peace out",
+      "see ya", "i'm leaving", "chat later", "bye chatbot"
+    ],
+    "responses": [
+      "Goodbye!",
+      "See you soon!",
+      "Take care, {name}!"
+    ]
+  },
+
+  {
+    "name": "help",
+    "examples": [
+      "help", "what can you do", "show me options", "how can you help me",
+      "list your features", "what do you do", "help me please",
+      "how does this work", "i need help", "what commands can i use",
+      "what can i say", "what functions do you have",
+      "what are your abilities", "explain what you do", "show commands"
+    ],
+    "responses": [
+      "Here’s what I can help you with:\n\n🟦 FOOD ORDERING\n• Start an order: “I want to order food” / “I'm hungry”\n• Add items anytime: “add fries”, “add a drink”\n• Order pizza, burgers, fries, wings, drinks, desserts\n• Ask for your saved order\n• Cancel anytime\n\n🟦 MENU & INFORMATION\n• Ask for the full menu\n• Ask prices\n• Check availability\n\n🟦 PERSONALISATION\n• Tell me your name and I'll remember it"
+    ]
+  },
+
+  {
+    "name": "identity_set",
+    "examples": [
+      "my name is john", "call me sam", "i am ron", "you can call me alex",
+      "they call me kate", "i'm tom", "i'm called claire", "i go by nick",
+      "call me boss", "call me king", "i prefer the name alex",
+      "remember my name is sam", "address me as mike"
+    ],
+    "responses": [
+      "Nice to meet you, {name}! I'll remember your name."
+    ]
+  },
+
+  {
+    "name": "identity_get",
+    "examples": [
+      "what is my name", "who am i", "do you remember my name",
+      "what did i tell you my name was", "do you know my name"
+    ],
+    "responses": [
+      "Your name is {name}.",
+      "You told me your name is {name}."
+    ]
+  },
+
+  {
+    "name": "menu_query",
+    "examples": [
+      "what's on the menu", "what do you serve", "what food do you sell",
+      "show me the menu", "tell me the menu", "what can i order",
+      "food options", "what meals do you offer", "menu please",
+      "can i see the menu", "full menu please"
+    ],
+    "responses": [
+      "Here's our full menu with prices:\n\n🍕 **Pizzas**\nMargherita £6.49–£10.49\nPepperoni £7.49–£11.49\nBBQ Chicken £7.99–£11.99\n\n🍔 **Burgers**\nCheeseburger £4.49–£5.99\nChicken Burger £4.29–£5.79\nVeggie Burger £4.19–£5.49\n\n🍟 **Sides**\nFries £1.49–£3.29\nOnion Rings £1.99–£2.99\n6 Wings £4.99\n10 Wings £7.49\nGarlic Bread £3.49–£4.49\n\n🥤 **Drinks**\nCola £1.20–£2.00\nLemonade £1.20–£2.00\nOrange Juice £1.50–£2.50\n\n🍨 **Desserts**\nIce Cream £1.99–£2.99\nChocolate Fudge Cake £2.99\nBrownie £1.50–£5.00\n\nWhat would you like to order?"
+    ]
+  },
+
+  {
+    "name": "price_query",
+    "examples": [
+      "how much is a pizza", "price of burger", "how much are fries",
+      "price list", "what's the cost of coke", "how much does a burger cost"
+    ],
+    "responses": [
+      "Here’s a quick price overview:\n• Pizza £6.99–£13.49\n• Burgers £5.99–£6.49\n• Sides £2.49–£7.49\n• Drinks £1.00–£2.79\n• Desserts £2.99–£3.99\n\nAsk for a specific item!"
+    ]
+  },
+
+  {
+    "name": "item_availability",
+    "examples": [
+      "do you have pizza", "is pizza available", "are fries available",
+      "is the veggie burger in stock", "do you sell drinks",
+      "do you serve wings", "is cola available", "are onion rings in stock"
+    ],
+    "responses": [
+      "Yes — everything on our menu is available! What would you like to order?"
+    ]
+  },
+
+  {
+    "name": "order_start",
+    "examples": [
+      "i want to order food", "i'm hungry", "can i order food",
+      "let me order", "i want a meal", "order food"
+    ],
+    "responses": [
+      "Sure — what would you like to order first?"
+    ]
+  },
+
+  {
+    "name": "order_item",
+    "examples": [
+      "pizza", "fries", "burger", "chips", "wings", "garlic bread",
+      "cola", "ice cream", "chicken burger", "veggie burger",
+      "pepperoni pizza", "bbq chicken pizza", "brownie"
+    ],
+    "responses": [
+      "Got it — what size would you like?"
+    ]
+  },
+
+  {
+    "name": "order_size_query",
+    "examples": [
+      "what sizes do you have", "what size options are there",
+      "what size is the pizza", "what drink sizes are available"
+    ],
+    "responses": [
+      "We offer small, medium, and large. What size would you like?"
+    ]
+  },
+
+  {
+    "name": "order_multi_item",
+    "examples": [
+      "i want 2 pizzas and a burger", "can i get a pizza and fries",
+      "i'd like pizza fries and a drink", "one pizza and two burgers"
+    ],
+    "responses": [
+      "Sure — I’ll take them one at a time. What’s the first item?"
+    ]
+  },
+
+  {
+    "name": "order_size",
+    "examples": [
+      "small", "medium", "large", "large please",
+      "a small one", "medium please", "make it large"
+    ],
+    "responses": [
+      "Great — how many would you like?"
+    ]
+  },
+
+  {
+    "name": "order_quantity",
+    "examples": [
+      "1", "one", "just one", "2", "two", "two please",
+      "3", "three", "i want two", "one please", "make it three"
+    ],
+    "responses": [
+      "Would you like anything else?"
+    ]
+  },
+
+  {
+    "name": "order_add_more",
+    "examples": [
+      "i also want", "add another", "i want another",
+      "also a burger", "and a pizza", "also fries",
+      "add fries", "add wings", "add a drink"
+    ],
+    "responses": [
+      "Sure — what else would you like?"
+    ]
+  },
+
+  {
+    "name": "order_method_query",
+    "examples": [
+      "how do i get it", "delivery or pickup", "do you deliver",
+      "is delivery available", "can i collect it"
+    ],
+    "responses": [
+      "Would you like delivery or pickup?"
+    ]
+  },
+
+  {
+    "name": "order_method",
+    "examples": [
+      "delivery", "pickup", "deliver to me", "i'll pick it up",
+      "collect it", "i want delivery"
+    ],
+    "responses": [
+      "Got it — {method}. Would you like to confirm your order?"
+    ]
+  },
+
+  {
+    "name": "order_confirm",
+    "examples": [
+      "yes", "confirm", "that's correct", "place the order",
+      "yes please", "confirm it", "go ahead"
+    ],
+    "responses": [
+      "Perfect — placing your order now!"
+    ]
+  },
+
+  {
+    "name": "order_cancel",
+    "examples": [
+      "cancel", "cancel my order", "stop order", "never mind",
+      "forget it", "i want to cancel", "abort order"
+    ],
+    "responses": [
+      "Order cancelled. Let me know if you need anything else!"
+    ]
+  },
+
+  {
+    "name": "order_status",
+    "examples": [
+      "what did i order", "what was my order again",
+      "repeat my order", "show my order", "what's in my cart"
+    ],
+    "responses": [
+      "Let me check your previous order..."
+    ]
+  },
+
+  {
+    "name": "conversation_control_repeat",
+    "examples": [
+      "can you repeat that", "say that again", "repeat please",
+      "i didn't catch that", "what did you say"
+    ],
+    "responses": [
+      "Sure — I said: {last_bot_message}"
+    ]
+  },
+
+  {
+    "name": "conversation_control_restart",
+    "examples": [
+      "start over", "restart", "reset", "start again",
+      "clear everything", "reset order"
+    ],
+    "responses": [
+      "Okay — starting over. What would you like to do?"
+    ]
+  },
+
+  {
+    "name": "smalltalk_how_are_you",
+    "examples": [
+      "how are you", "how's it going", "you good",
+      "how are things", "how do you feel"
+    ],
+    "responses": [
+      "I'm doing great! How can I help you today?",
+      "All good here — ready to chat! 😊",
+      "Feeling helpful as always. What’s up?"
+    ]
+  },
+
+  {
+    "name": "smalltalk_joke",
+    "examples": [
+      "tell me a joke", "make me laugh", "say something funny",
+      "give me a joke"
+    ],
+    "responses": [
+      "Why don’t burgers tell secrets? Because they might spill the beans! 😂",
+      "I tried a pizza joke once… but it was too cheesy.",
+      "Fries before guys. It’s a lifestyle."
+    ]
+  },
+
+  {
+    "name": "smalltalk_bored",
+    "examples": [
+      "i'm bored", "bored", "talk to me", "i need entertainment"
+    ],
+    "responses": [
+      "Bored? You could order some food… that always helps 😄",
+      "Let’s fix that! Want to hear a joke?",
+      "I’m here — what’s on your mind?"
+    ]
+  },
+
+  {
+    "name": "smalltalk_thanks",
+    "examples": [
+      "thanks", "thank you", "cheers", "appreciate it",
+      "thanks a lot", "ty"
+    ],
+    "responses": [
+      "You're welcome!",
+      "Anytime! 😊",
+      "No problem at all!"
+    ]
+  },
+
+  {
+    "name": "smalltalk_affection",
+    "examples": [
+      "i like you", "i love you", "you're cute",
+      "you are amazing", "i adore you"
+    ],
+    "responses": [
+      "Aww, that's sweet! I'm here to help however I can.",
+      "You're awesome too! 😊",
+      "Thanks! I'm glad you're enjoying the chat."
+    ]
+  },
+
+  {
+    "name": "smalltalk_confirmation",
+    "examples": [
+      "ok", "cool", "nice", "sounds good",
+      "awesome", "perfect", "alright"
+    ],
+    "responses": [
+      "Glad you think so!",
+      "Cool 😄",
+      "Awesome — what's next?"
+    ]
+  },
+
+  {
+    "name": "smalltalk_presence",
+    "examples": [
+      "you there?", "hello robot", "hello assistant",
+      "are you online", "can you hear me"
+    ],
+    "responses": [
+      "I'm here! How can I help?",
+      "Yep, I’m right here 😄",
+      "Always here and ready to chat!"
+    ]
+  },
+
+  {
+    "name": "smalltalk_goodnight",
+    "examples": [
+      "good night", "night", "nite", "i'm going to sleep"
+    ],
+    "responses": [
+      "Good night! Sleep well 😴",
+      "Sweet dreams!",
+      "Night! See you later."
+    ]
+  },
+
+  {
+    "name": "menu_drinks",
+    "examples": [
+      "what drinks do you have",
+      "what drinks do you sell",
+      "list drinks",
+      "what are your drinks",
+      "show me drinks",
+      "drink options",
+      "do you have drinks"
+    ],
+    "responses": [
+      "We offer cola, lemonade, and orange juice. All available in can or bottle (juice in small/large)."
+    ]
+  },
+
+
+  {
+  "name": "recommendation",
+  "examples": [
+    "what do you recommend",
+    "what's popular",
+    "surprise me",
+    "what should i get"
+  ],
+  "responses": [
+    "Our most popular items are pepperoni pizza, fries, and brownies 😄",
+    "People love our cheeseburgers and wings!",
+    "Pepperoni pizza with fries is a classic favourite!"
+  ]
+}
+
+
+
+]

@@ -1,0 +1,99 @@
+[
+  { "question": "who created you", "answer": "I was created by Ron Prekopuca as a natural language processing project." },
+  { "question": "who built this chatbot", "answer": "This chatbot was designed and implemented by Ron Prekopuca." },
+  { "question": "who made you", "answer": "I was made by Ron Prekopuca." },
+
+  { "question": "what is ai", "answer": "AI (Artificial Intelligence) refers to computer systems designed to perform tasks that normally require human intelligence." },
+  { "question": "define ai", "answer": "Artificial Intelligence is the field of creating machines that can perform tasks requiring human-like intelligence." },
+
+  { "question": "what is nlp", "answer": "NLP (Natural Language Processing) is a field of AI that enables computers to understand and generate human language." },
+  { "question": "define nlp", "answer": "NLP stands for Natural Language Processing, allowing computers to work with human language." },
+
+  { "question": "how does chatgpt work", "answer": "ChatGPT uses transformer-based models trained on large text datasets to generate responses based on patterns in language." },
+  { "question": "how do chatbots work", "answer": "Chatbots typically use intent classification, rules, and scripted responses to understand messages and reply appropriately." },
+
+  { "question": "what is pizza", "answer": "Pizza is baked flatbread topped with tomato sauce, cheese, and additional toppings like pepperoni or vegetables." },
+  { "question": "where was pizza invented", "answer": "Modern pizza originated in Naples, Italy." },
+  { "question": "how many calories in pizza", "answer": "A slice of pizza typically contains 200–350 calories depending on size and toppings." },
+
+  { "question": "what is a burger", "answer": "A burger is a cooked patty served inside a bun, often with toppings like lettuce, tomato, and cheese." },
+  { "question": "where were burgers invented", "answer": "The hamburger became popular in the United States in the late 19th and early 20th century." },
+
+  { "question": "what are fries", "answer": "Fries are potatoes cut into strips and deep-fried until crispy." },
+
+  { "question": "what are wings", "answer": "Chicken wings are fried or baked pieces of chicken, usually served with sauces." },
+
+  { "question": "what is garlic bread", "answer": "Garlic bread is toasted bread topped with garlic, butter, and herbs." },
+
+  { "question": "what payment methods do you accept", "answer": "This demo supports cash on delivery or pay in store." },
+  { "question": "what payment options do you have", "answer": "Currently the demo supports cash on delivery or in-store payment." },
+
+  { "question": "how long does delivery take", "answer": "Delivery usually takes around 25–40 minutes." },
+  { "question": "how fast is delivery", "answer": "Delivery typically arrives within 25–40 minutes." },
+
+  { "question": "do you deliver", "answer": "Yes — delivery is available within Nottingham in this demo." },
+  { "question": "is delivery available", "answer": "Delivery is available within Nottingham for this demo." },
+
+  { "question": "where do you deliver", "answer": "Delivery is assumed to be available within Nottingham city." },
+
+  { "question": "can i track my order", "answer": "Order tracking is not implemented in this demo." },
+
+  { "question": "do you take card", "answer": "Not in this demo — only cash on delivery or in-store payment." },
+
+  { "question": "how do i contact support", "answer": "This is a demo project, so there's no external support system. But you can ask me anything here!" },
+
+  { "question": "what programming language was this made in", "answer": "This chatbot was implemented in Python using scikit-learn, JSON-based intent matching, and TF-IDF retrieval."},
+  { "question": "what technologies were used", "answer": "It uses natural language classification, JSON-based intents, a routing layer, and QA retrieval." },
+
+  { "question": "what is a chatbot", "answer": "A chatbot is a system that understands user messages and responds automatically." },
+
+
+  { "question": "what sizes are available", "answer": "Food items typically come in small, medium, and large." },
+  { "question": "what drink sizes are there", "answer": "Drinks are available in small, medium, and large." },
+  { "question": "are large portions available", "answer": "Yes — many items offer large sizes depending on the item." },
+
+  { "question": "how hot are your wings", "answer": "This demo assumes wings are mild/medium." },
+
+  { "question": "what toppings can i choose", "answer": "Topping selection is not implemented, but could include pepperoni, mushrooms, peppers, olives, etc." },
+
+  { "question": "are vegetarian options available", "answer": "Yes — veggie burgers and some sides are vegetarian." },
+
+  { "question": "do you have vegan options", "answer": "Vegan options aren’t implemented but can be added." },
+
+  { "question": "is this real", "answer": "This is a demo, not a real food delivery service." },
+
+  { "question": "can i order real food", "answer": "Not in this demo — it simulates a food ordering system." },
+
+  { "question": "why was this chatbot made", "answer": "It was created to demonstrate NLP and interactive design." },
+
+  { "question": "can you define artificial intelligence", "answer": "Artificial intelligence is the field of building computer systems that can perform tasks that normally require human intelligence, such as reasoning or language understanding." },
+  { "question": "explain ai in simple terms", "answer": "AI is when computers are designed to make smart decisions or understand language in a way that looks similar to human intelligence." },
+
+  { "question": "what does ai stand for", "answer": "AI stands for Artificial Intelligence." },
+  { "question": "what does nlp stand for", "answer": "NLP stands for Natural Language Processing." },
+  { "question": "explain natural language processing", "answer": "Natural Language Processing is about teaching computers to understand, interpret, and generate human language." },
+
+  { "question": "what is tf idf", "answer": "TF-IDF is a way of scoring words based on how often they appear in a document compared to how common they are across all documents." },
+  { "question": "how does tf idf work", "answer": "TF-IDF multiplies term frequency in a document by the inverse document frequency, giving higher scores to words that are frequent in a document but rare overall." },
+
+  { "question": "what is delivery", "answer": "Delivery means your order is brought to your address instead of you collecting it from the store." },
+  { "question": "what is pickup", "answer": "Pickup means you come to the store to collect your order yourself." },
+
+  { "question": "what is a menu", "answer": "A menu is a list of food and drink items that a restaurant offers, usually with prices." },
+  { "question": "what is a side dish", "answer": "A side dish is a smaller item such as fries or onion rings that you eat alongside a main meal." },
+
+  { "question": "describe pepperoni pizza", "answer": "Pepperoni pizza is a pizza topped with tomato sauce, cheese, and slices of spicy cured pepperoni sausage." },
+  { "question": "describe bbq chicken pizza", "answer": "BBQ chicken pizza is a pizza topped with barbecue sauce, cheese, and pieces of cooked chicken." },
+  { "question": "what is a veggie burger", "answer": "A veggie burger is a burger made from plant-based ingredients such as vegetables, beans, or soy instead of meat." },
+
+  { "question": "are fries unhealthy", "answer": "Fries are usually deep-fried and can be high in fat and salt, so they are best enjoyed in moderation." },
+  { "question": "are burgers unhealthy", "answer": "Burgers can be high in calories, fat, and salt depending on ingredients and portion size, but can also be part of a balanced diet in moderation." },
+
+  { "question": "why do you not support card payments", "answer": "Card payments are not implemented in this demo so the focus can remain on the core NLP and dialogue functionality." },
+  { "question": "why is order tracking not implemented", "answer": "Order tracking is outside the scope of this demo, which focuses on the main NLP features." },
+
+  { "question": "how did you build this chatbot", "answer": "This chatbot was built using Python, scikit-learn for text classification, and JSON files for intent and QA data, combined with a finite state machine for ordering." },
+  { "question": "why are you using tf idf", "answer": "TF-IDF is used because it is simple, efficient for small datasets, and works well for matching short user messages to intents and questions." }
+
+]
+

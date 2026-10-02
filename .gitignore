@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+
+# trained on first run from data/router_data.json
+data/router_model.joblib
