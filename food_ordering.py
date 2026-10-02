@@ -61,6 +61,7 @@ class FoodOrderingSystem:
         self.temp_item = None
         self.temp_size = None
         self.temp_quantity = None
+        self.pending_items = []  # (item, quantity) pairs still waiting for a size
 
     def start_order(self):
         self.state = "awaiting_item"
@@ -75,7 +76,13 @@ class FoodOrderingSystem:
 
         # GLOBAL ACTIONS
 
-        if intent == "order_cancel" or re.search(r"\b(cancel|nevermind|forget it|stop order|stop)\b", text_lower):
+        # A valid size answer (e.g. "can") must not be mistaken for a cancel intent
+        answering_size = (
+            self.state == "awaiting_size"
+            and self._extract_size(text_lower, item=self.temp_item) in self._allowed_sizes_for(self.temp_item)
+        )
+
+        if (intent == "order_cancel" and not answering_size) or re.search(r"\b(cancel|nevermind|forget it|stop order|stop)\b", text_lower):
             self.reset()
             return "Order cancelled. Let me know if you need anything else!"
 
@@ -126,10 +133,15 @@ class FoodOrderingSystem:
         if self.state == "awaiting_size":
             if intent == "order_size" or self._looks_like_size(text_lower):
                 size = self._extract_size(text_lower, item=self.temp_item)
-                if not size:
-                    sizes = self._allowed_sizes_for(self.temp_item)
+                sizes = self._allowed_sizes_for(self.temp_item)
+                if size not in sizes:
                     return f"Please choose a size. We have: {', '.join(sizes)}."
                 self.temp_size = size
+
+                # Quantity already given earlier (e.g. "two pizzas and a cola")
+                if self.temp_quantity:
+                    return self._add_pending_item()
+
                 self.state = "awaiting_quantity"
                 return "How many would you like?"
 
@@ -259,6 +271,10 @@ class FoodOrderingSystem:
     # ITEM HANDLING HELPERS
 
     def _handle_item_input(self, text_lower: str):
+        segments = self._split_order_segments(text_lower)
+        if len(segments) > 1:
+            return self._handle_multiple_items(segments)
+
         qty = self._extract_quantity(text_lower)
         item = self._find_item_in_text(text_lower)
         size = self._extract_size(text_lower, item=item)
@@ -295,6 +311,56 @@ class FoodOrderingSystem:
 
         return "I didn't catch the item. What would you like to order?"
 
+    def _split_order_segments(self, text_lower: str):
+        """Split 'two large pizzas and a cola' into one segment per menu item."""
+        parts = re.split(r"\s*(?:,|\band\b|\bplus\b)\s*", text_lower)
+        return [p for p in parts if p and self._find_item_in_text(p) in MENU_ITEMS]
+
+    def _handle_multiple_items(self, segments):
+        added = []
+        needs_size = []
+
+        for segment in segments:
+            item = self._find_item_in_text(segment)
+            qty = self._extract_quantity(segment)
+            size = self._extract_size(segment, item=item)
+
+            if size in MENU_ITEMS[item]["sizes"]:
+                self.order["items"].append({"item": item, "size": size, "quantity": qty})
+                added.append(f"{qty} × {size} {item}")
+            else:
+                needs_size.append((item, qty))
+
+        reply = f"Added {', '.join(added)}. " if added else ""
+
+        if needs_size:
+            self.pending_items = needs_size
+            return reply + self._ask_next_pending_size()
+
+        self.state = "awaiting_additional"
+        return reply + "Would you like anything else?"
+
+    def _ask_next_pending_size(self):
+        """Ask for the size of the next queued item; its quantity is remembered."""
+        self.temp_item, self.temp_quantity = self.pending_items.pop(0)
+        self.temp_size = None
+        self.state = "awaiting_size"
+        sizes = ", ".join(self._allowed_sizes_for(self.temp_item))
+        return f"What size {self.temp_item} would you like? We have: {sizes}."
+
+    def _add_pending_item(self):
+        item, size, qty = self.temp_item, self.temp_size, self.temp_quantity
+        self.order["items"].append({"item": item, "size": size, "quantity": qty})
+        self.temp_item = None
+        self.temp_size = None
+        self.temp_quantity = None
+
+        if self.pending_items:
+            return f"Added {qty} × {size} {item}. " + self._ask_next_pending_size()
+
+        self.state = "awaiting_additional"
+        return f"Added {qty} × {size} {item}. Would you like anything else?"
+
  
     # NLP EXTRACTION UTILITIES
 
@@ -304,7 +370,7 @@ class FoodOrderingSystem:
             return "cola"
 
         for name in sorted(MENU_ITEMS.keys(), key=lambda x: -len(x)):
-            if re.search(r"\b" + re.escape(name) + r"\b", text_lower):
+            if re.search(r"\b" + re.escape(name) + r"(?:s|es)?\b", text_lower):
                 return name
 
         # fuzzy match 

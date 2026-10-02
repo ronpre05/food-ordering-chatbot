@@ -1,6 +1,6 @@
 # Food Ordering Chatbot
 
-A command-line chatbot that takes takeaway orders in natural language, answers factual questions, and handles small talk. It is built from classical NLP components (TF-IDF, cosine similarity, logistic regression) and a finite state machine, with no large language model involved.
+A chatbot that takes takeaway orders in natural language, answers factual questions, and handles small talk. It is built from classical NLP components (TF-IDF, cosine similarity, logistic regression) and a finite state machine, with no large language model involved.
 
 ```
 You: my name is Ron
@@ -23,7 +23,7 @@ Each message passes through three stages:
 
 Other features:
 
-- Several items in one message ("two large pepperoni pizzas and a cola")
+- Several items in one message ("two large pepperoni pizzas and a cola"), asking in turn for any size that is missing
 - Fuzzy matching of misspelt menu items, with suggestions
 - Size validation per item, running totals and an order summary
 - Remembers the user's name and can repeat its last message
@@ -34,6 +34,12 @@ Requires Python 3.9+.
 
 ```bash
 pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+This opens the chat in your browser, with a side panel showing the order as it builds. For the plain command-line version:
+
+```bash
 python main.py
 ```
 
@@ -51,6 +57,7 @@ This prints accuracy, a classification report and a confusion matrix for the rou
 
 | File | Purpose |
 |---|---|
+| `streamlit_app.py` | Web chat interface |
 | `main.py` | Command-line entry point |
 | `chatbot.py` | Dialogue controller that ties the components together |
 | `nlp_router.py` | Question vs. task routing (rules + logistic regression) |
